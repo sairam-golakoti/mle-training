@@ -19,7 +19,7 @@ python nonstandardcode.py
 
 ## Steps to run the code
 1. Clone the `mle-training` repository.
-2. Setup the conda environment by running the following command `conda env create -f env.yml`.
+2. Setup the conda environment by running the following command `conda env create -f env.yml` and run `conda activate mle-dev` to activate the environment.
 3. Run the python script `python nonstandardcode.py`.
 4. After running for a few minutes, similar results will be printed to terminal:
 ```
