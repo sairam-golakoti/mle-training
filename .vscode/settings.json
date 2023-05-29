@@ -6,10 +6,11 @@
         },
     },
     "flake8.args": [
-        "--max-line-length=88",
+        "--max-line-length=100",
     ],
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
-        "--line-length=88"
+        "--line-length=100"
     ],
+    "autoDocstring.docstringFormat": "numpy",
 }
