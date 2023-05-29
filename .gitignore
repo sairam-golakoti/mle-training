@@ -5,3 +5,9 @@
 # ignore data files
 
 *.csv
+
+# ignore artifacts
+*.pkl
+
+# ignore all logs
+*.log

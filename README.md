@@ -52,3 +52,13 @@ python nonstandardcode.py
 57719.276994840606 {'bootstrap': False, 'max_features': 4, 'n_estimators': 3}
 51419.866104752255 {'bootstrap': False, 'max_features': 4, 'n_estimators': 10}
 ```
+
+## Steps for execution
+1. Clone the `mle-training` repository.
+2. Setup the conda environment by running the following command `conda env create -f env.yml` and run `conda activate mle-dev` to activate the environment.
+3. Run `python ingest_data.py` to download the raw dataset and split it into train and test datasets.
+4. Run `python train.py` to train the RandomForest Regression model and save the model.
+5. Run `python score.py` to score the trained model using the test dataset.
+6. You will see a info message `Execution completed without any errors.` indicating execution of the script is completed.
+7. Additionally you can pass the arguments to the above commands to change the datasets or model paths and to check/save the logs.
+    > `Use python <script.py> --help` to see the documentaion on available arguments.

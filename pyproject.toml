@@ -5,3 +5,12 @@ profile = "black"
 multi_line_output = 4
 [tool.flake8]
 max-line-length = 88
+
+[project]
+name = "housing_price_prediction"
+version = "0.3.0"
+authors = [
+    {name="Sairam Golakoti", mail="sairam.golakoti@tigeranalytics.com"}
+]
+description = "This Package is to predict the median house price of a locality given the input features"
+readme = "README.md"
