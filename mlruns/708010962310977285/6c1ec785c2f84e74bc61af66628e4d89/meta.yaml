@@ -1,0 +1,16 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/6c1ec785c2f84e74bc61af66628e4d89/artifacts
+deleted_time: 1688746654780
+end_time: 1688746169460
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: deleted
+run_id: 6c1ec785c2f84e74bc61af66628e4d89
+run_name: bittersweet-toad-776
+run_uuid: 6c1ec785c2f84e74bc61af66628e4d89
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746165254
+status: 3
+tags: []
+user_id: sairam

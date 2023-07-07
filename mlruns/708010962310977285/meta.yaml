@@ -1,0 +1,6 @@
+artifact_location: file:///home/sairam/mle-training/mlruns/708010962310977285
+creation_time: 1688746093225
+experiment_id: '708010962310977285'
+last_update_time: 1688746093225
+lifecycle_stage: active
+name: housing_price_prediction

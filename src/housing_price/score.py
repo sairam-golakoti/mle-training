@@ -3,6 +3,7 @@ import logging
 import pickle
 import sys
 
+import mlflow
 import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_squared_error
@@ -16,13 +17,13 @@ if __name__ == "__main__":
         "-mp",
         "--model_path",
         help="Provide path to store output files",
-        default="../../artifacts/model.pkl",
+        default="artifacts/model.pkl",
     )
     parser.add_argument(
         "-tp",
         "--test_data_path",
         help="Provide path for test dataset",
-        default="../../data/processed/test/test.csv",
+        default="data/processed/test/test.csv",
     )
     parser.add_argument(
         "-l",
@@ -32,9 +33,7 @@ if __name__ == "__main__":
         help="Provide level of the log",
         default="info",
     )
-    parser.add_argument(
-        "-lp", "--log_path", help="Provide path to store log file", default="../../logs"
-    )
+    parser.add_argument("-lp", "--log_path", help="Provide path to store log file", default="logs")
     parser.add_argument(
         "-ncl",
         "--no_console_log",
@@ -75,13 +74,16 @@ if __name__ == "__main__":
     y_test = test_data["median_house_value"].copy().values
 
     logger.info(f"Loading Trained RandomForest Model at {model_path}...")
-    with open(model_path, "rb") as file:
-        model = pickle.load(file)
+    model = mlflow.sklearn.load_model("models:/final_model/1")
+    # with open(model_path, "rb") as file:
+    #     model = pickle.load(file)
 
     logger.info("Scoring the model...")
     final_predictions = model.predict(X_test)
     final_mse = mean_squared_error(y_test, final_predictions)
     final_rmse = np.sqrt(final_mse)
+
+    mlflow.log_metric("rmse", final_rmse)
 
     logger.info(f"RMSE for the Test data provided on RandomForest Model is {final_rmse}.")
 

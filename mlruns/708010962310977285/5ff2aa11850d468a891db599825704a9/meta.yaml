@@ -1,0 +1,16 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/5ff2aa11850d468a891db599825704a9/artifacts
+deleted_time: 1688746654768
+end_time: 1688746565664
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: deleted
+run_id: 5ff2aa11850d468a891db599825704a9
+run_name: brawny-kite-542
+run_uuid: 5ff2aa11850d468a891db599825704a9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746502224
+status: 3
+tags: []
+user_id: sairam

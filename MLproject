@@ -1,0 +1,16 @@
+name: housing_price_mlflow
+
+conda_env: env.yml
+
+entry_points:
+  ingest_data:
+    command: "python src/housing_price/ingest_data.py"
+    
+  model-train:
+    command: "python src/housing_price/train.py"
+
+  model-score:
+    command: "python src/housing_price/score.py"
+
+  main:
+    command: "python src/housing_price/main.py"

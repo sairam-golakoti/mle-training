@@ -4,6 +4,7 @@ import os
 import sys
 import tarfile
 
+import mlflow
 import numpy as np
 import pandas as pd
 from six.moves import urllib
@@ -56,6 +57,7 @@ class HousingPriceData:
         """
         csv_path = os.path.join(self.raw_path, "housing.csv")
         self.housing = pd.read_csv(csv_path)
+        mlflow.log_artifacts(self.raw_path, "housing-data-csv")
 
     def split_data(self) -> tuple[pd.DataFrame, pd.DataFrame]:
         """This function splits the data into train and test datasets
@@ -182,11 +184,13 @@ class HousingPriceData:
             Type of the dataset ["train", "test"]
         """
         os.makedirs(os.path.join(self.processed_path, type), exist_ok=True)
+        path = os.path.join(self.processed_path, type, f"{type}.csv")
         data.to_csv(
-            os.path.join(self.processed_path, type, f"{type}.csv"),
+            path,
             index=False,
             index_label=False,
         )
+        mlflow.log_artifact(path, f"{type}-data-csv")
 
 
 if __name__ == "__main__":
@@ -201,13 +205,13 @@ if __name__ == "__main__":
         "-r",
         "--raw_path",
         help="Provide path to store raw data",
-        default="../../data/raw",
+        default="data/raw",
     )
     parser.add_argument(
         "-p",
         "--processed_path",
         help="Provide path to store processed data",
-        default="../../data/processed",
+        default="data/processed",
     )
     parser.add_argument(
         "-l",
@@ -217,9 +221,7 @@ if __name__ == "__main__":
         help="Provide level of the log",
         default="info",
     )
-    parser.add_argument(
-        "-lp", "--log_path", help="Provide path to store log file", default="../../logs"
-    )
+    parser.add_argument("-lp", "--log_path", help="Provide path to store log file", default="logs")
     parser.add_argument(
         "-ncl",
         "--no_console_log",

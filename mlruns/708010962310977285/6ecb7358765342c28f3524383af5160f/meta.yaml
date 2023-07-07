@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/6ecb7358765342c28f3524383af5160f/artifacts
+end_time: 1688746757487
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: active
+run_id: 6ecb7358765342c28f3524383af5160f
+run_name: model-score
+run_uuid: 6ecb7358765342c28f3524383af5160f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746752935
+status: 3
+tags: []
+user_id: sairam
