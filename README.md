@@ -62,3 +62,11 @@ python nonstandardcode.py
 6. You will see a info message `Execution completed without any errors.` indicating execution of the script is completed.
 7. Additionally you can pass the arguments to the above commands to change the datasets or model paths and to check/save the logs.
     > `Use python <script.py> --help` to see the documentaion on available arguments.
+
+## Steps to install the library
+1. Create the environment from `env.yaml` file.
+    > `conda env create -f env.yaml`
+2. Install the Library through `.whl` file.
+    > `python -m pip install dist/housing_price-0.4.0-py2.py3-none-any.whl`
+3. Test the installation of the library:
+    > `python tests/unit_tests/test_installation.py`
