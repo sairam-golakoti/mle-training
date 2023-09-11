@@ -1,0 +1,16 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/3e08c8d380e649768688399135f3428f/artifacts
+deleted_time: 1688746654792
+end_time: 1688746101059
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: deleted
+run_id: 3e08c8d380e649768688399135f3428f
+run_name: youthful-whale-692
+run_uuid: 3e08c8d380e649768688399135f3428f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746096653
+status: 3
+tags: []
+user_id: sairam

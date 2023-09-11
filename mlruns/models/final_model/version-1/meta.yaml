@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1688746164478
+current_stage: None
+description: null
+last_updated_timestamp: 1688746164478
+name: final_model
+run_id: 80162a0915bf440cbf7ac6622da7e982
+run_link: null
+source: file:///home/sairam/mle-training/mlruns/708010962310977285/80162a0915bf440cbf7ac6622da7e982/artifacts/models
+status: READY
+status_message: null
+user_id: null
+version: 1

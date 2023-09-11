@@ -1,0 +1,16 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/80162a0915bf440cbf7ac6622da7e982/artifacts
+deleted_time: 1688746654788
+end_time: 1688746165083
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: deleted
+run_id: 80162a0915bf440cbf7ac6622da7e982
+run_name: carefree-mouse-603
+run_uuid: 80162a0915bf440cbf7ac6622da7e982
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746101220
+status: 3
+tags: []
+user_id: sairam

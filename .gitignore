@@ -1,5 +1,5 @@
 # ignore python cache files
-
+*.ipynb_checkpoints
 *.pyc
 
 # ignore data files

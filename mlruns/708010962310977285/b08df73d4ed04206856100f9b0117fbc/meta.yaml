@@ -1,0 +1,16 @@
+artifact_uri: file:///home/sairam/mle-training/mlruns/708010962310977285/b08df73d4ed04206856100f9b0117fbc/artifacts
+deleted_time: 1688746672821
+end_time: 1688746570259
+entry_point_name: ''
+experiment_id: '708010962310977285'
+lifecycle_stage: deleted
+run_id: b08df73d4ed04206856100f9b0117fbc
+run_name: abrasive-shrike-923
+run_uuid: b08df73d4ed04206856100f9b0117fbc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1688746565859
+status: 3
+tags: []
+user_id: sairam

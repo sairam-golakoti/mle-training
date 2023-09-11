@@ -3,6 +3,7 @@ import logging
 import pickle
 import sys
 
+import mlflow
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
@@ -86,13 +87,13 @@ if __name__ == "__main__":
         "-td",
         "--train_data",
         help="Provide path to read the input data",
-        default="../../data/processed/train/train.csv",
+        default="data/processed/train/train.csv",
     )
     parser.add_argument(
         "-op",
         "--output_data",
         help="Provide path to store output files",
-        default="../../artifacts/model.pkl",
+        default="artifacts/model.pkl",
     )
     parser.add_argument(
         "-l",
@@ -103,7 +104,7 @@ if __name__ == "__main__":
         default="info",
     )
     parser.add_argument(
-        "-lp", "--log_path", help="Provide path to store log file", default="../../logs"
+        "-lp", "--log_path", help="Provide path to store log file", default="logs"
     )
     parser.add_argument(
         "-ncl",
@@ -146,6 +147,8 @@ if __name__ == "__main__":
 
     logger.info("Training RandomForest Regressor model...")
     model = trainer.model_train(X_train, y_train)
+
+    mlflow.sklearn.log_model(model, "models", registered_model_name="final_model")
 
     logger.info(f"Saving the trained model at {output_data}...")
     with open(output_data, "wb") as file:
